@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Gemini-Faculty-Companion
+server:
+  port: 8081
