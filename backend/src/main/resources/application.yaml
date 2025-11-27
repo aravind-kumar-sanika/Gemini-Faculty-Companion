@@ -1,5 +1,21 @@
 spring:
-  application:
-    name: Gemini-Faculty-Companion
+  datasource:
+    url: "jdbc:sqlserver://localhost:1433;databaseName=GeminiFacultyCompanionDB;encrypt=false;trustServerCertificate=true"
+    username: "Deepthi_Annem"
+    password: "Saireddy@123"
+    driver-class-name: "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.SQLServerDialect"
+
 server:
   port: 8081
+
+jwt:
+  secret: "my-super-secret-key-that-you-will-change"
+  expiration: 86400000
